@@ -29,3 +29,13 @@ FROM dept_emp
 WHERE from_date > "2000-01-01"
 GROUP BY emp_no
 HAVING COUNT(from_date) > 1;
+
+# LIMIT must go at end of query
+SELECT * 
+FROM salaries
+ORDER BY salary DESC
+LIMIT 10;
+
+SELECT *
+FROM dept_emp
+LIMIT 100;
