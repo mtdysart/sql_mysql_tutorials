@@ -102,3 +102,5 @@ FROM
 	FROM dept_manager dm
 ) AS a
 ORDER BY -a.emp_no DESC;
+
+# SELF JOIN combines rows of a table with other rows of the same table
