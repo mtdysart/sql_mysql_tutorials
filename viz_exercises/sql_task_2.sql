@@ -2,7 +2,7 @@
 USE employees_mod;
 
 # The active column will be used to count the number of managers by year
-CREATE VIEW active_dept_managers AS
+CREATE OR REPLACE VIEW active_dept_managers AS
     SELECT 
         d.dept_name,
         e.gender,
@@ -25,8 +25,6 @@ CREATE VIEW active_dept_managers AS
             YEAR(hire_date) AS calendar_year
         FROM
             t_employees
-        WHERE
-            hire_date >= '1990-01-01'
         GROUP BY calendar_year) AS calendar_years
             JOIN
         t_departments d ON dm.dept_no = d.dept_no
