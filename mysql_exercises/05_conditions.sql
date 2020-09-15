@@ -49,6 +49,11 @@ SELECT *
 FROM employees
 WHERE emp_no LIKE("_1000");
 
+# Find distinct first names which begin with a vowel using regular expressions
+SELECT DISTINCT first_name 
+FROM employees 
+WHERE first_name REGEXP "^[aeiou]";
+
 # Note: BETWEEN is inclusive
 SELECT *
 FROM employees
